@@ -393,7 +393,7 @@ namespace magicbit {
         if (speed <= -4096) {
             speed = -4095
         }
-        if (index > 4 || index <= 0)
+        if (index > 7 || index <= 0)
             return
         let pp = (index - 1) * 2
         let pn = (index - 1) * 2 + 1
