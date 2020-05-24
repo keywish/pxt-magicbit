@@ -508,8 +508,8 @@ namespace magicbit {
     export function RUS_04(index: RgbUltrasonics, rgb: RgbColors, effect: ColorEffect): void {
         let start, end;
         if (!neoStrip) {
-            neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB)
-            neoStrip.clear()
+            neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB);
+            neoStrip.clear();
         }
         if (index == RgbUltrasonics.Left) {
             start = 4;
@@ -591,8 +591,8 @@ namespace magicbit {
     //% weight=75
     export function rgb(): neopixel.Strip {
         if (!neoStrip) {
-            neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB)
-	    neoStrip.clear()
+            neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB);
+	    neoStrip.clear();
         }
         return neoStrip;
     }
