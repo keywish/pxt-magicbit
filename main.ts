@@ -86,12 +86,12 @@ namespace magicbit {
 
     export enum Motors {
         M1 = 0x3,
-        M2 = 0x4,
-        M3 = 0x1,
-        M4 = 0x2,
-        M5 = 0x6,
-        M6 = 0x7,
-        M7 = 0x8,	
+        M2 = 0x1,
+        M3 = 0x7,
+        M4 = 0x4,
+        M5 = 0x2,
+        M6 = 0x8,
+        M7 = 0x6,	
     }
 
     export enum Steppers {
@@ -393,7 +393,7 @@ namespace magicbit {
         if (speed <= -4096) {
             speed = -4095
         }
-        if (index > 7 || index <= 0)
+        if (index > 8 || index <= 0)
             return
         let pp = (index - 1) * 2
         let pn = (index - 1) * 2 + 1
@@ -509,6 +509,7 @@ namespace magicbit {
         let start, end;
         if (!neoStrip) {
             neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB)
+            neoStrip.clear()
         }
         if (index == RgbUltrasonics.Left) {
             start = 4;
@@ -591,6 +592,7 @@ namespace magicbit {
     export function rgb(): neopixel.Strip {
         if (!neoStrip) {
             neoStrip = neopixel.create(DigitalPin.P16, 10, NeoPixelMode.RGB)
+	    neoStrip.clear()
         }
         return neoStrip;
     }
