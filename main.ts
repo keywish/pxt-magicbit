@@ -454,7 +454,7 @@ namespace magicbit {
             initPCA9685()
         }
         for (let idx = 1; idx <= 8; idx++) {
-	    if (i != 5)
+	    if (idx != 5)
             stopMotor(idx);
         }
     }
